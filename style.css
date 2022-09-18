@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.titleImage {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    padding: 4rem;
+}
+
+.inputroupas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inputs {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.inputs input {
+    border:0;
+    outline:0;
+}
+
+.imagens {
+    display: flex !important;
+    justify-content: space-evenly;
+    height: 40rem;
+}
+
+#apagarImagemFrente, #apagarImagemCostas {
+    font-size: 1.3rem;
+}
+
+.divflex {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    page-break-inside: avoid;
+}
+
+.titleTable {
+    display: flex;
+    gap: 8rem;
+}
+
+#inputMedidas{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+
+#inputCores {
+    display: grid;
+    grid-template-columns: 1fr  ;
+}
+
+#inputAviamento {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.liInput, .liInputCores, .liInputTecido, .liInputAviamento {
+    list-style: none;
+    page-break-inside: avoid;
+}
+
+.addMedida, .addCores, .addTecido, .addAviamento{
+    font-size: 1.3rem;
+    page-break-inside: avoid;
+}
+
+.removeMedida, .removeCores, .removeTecido, .removeAviamento {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    page-break-inside: avoid;
+}
+
+
+.inputText, .inputTextCores, .inputTextTecidos, .inputTextAviamento, .titleInput{
+    padding: 5px;
+    width: 9rem;
+    page-break-inside: avoid;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#qtdAv, #qtdTec, #qtd, #metragem {
+    width: 5rem;
+}
+
+.titleAv, .titleTec, .titleCor {
+    display: none;
+}
+
+
+
+
+
+
