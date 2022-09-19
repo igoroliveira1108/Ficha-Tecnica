@@ -16,11 +16,13 @@ let titleCor = document.querySelector('.titleCor');
 
 
 function readFront(input) {
+    let frente = document.querySelector('#frente');
     if (input.files && input.files[0]) {
       var reader = new FileReader();
-  
+    
       reader.onload = function (e) {
-        document.querySelector('#frente').attr('src', e.target.result).width(500).height(550);
+        //.attr('src', e.target.result).width(500).height(550);
+         frente.setAttribute('src', e.target.result).width(500).height(550)
       };
   
       reader.readAsDataURL(input.files[0]);
