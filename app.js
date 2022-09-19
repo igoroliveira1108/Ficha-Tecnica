@@ -21,7 +21,6 @@ function readFront(input) {
       var reader = new FileReader();
     
       reader.onload = function (e) {
-        //.attr('src', e.target.result).width(500).height(550);
          frente.setAttribute('src', e.target.result);
          frente.style.width = '500px';
          frente.style.height = '550px';
@@ -35,11 +34,14 @@ function readFront(input) {
   }
 
   function readBack(input) {
+      let costas = document.querySelector('#costas');
     if (input.files && input.files[0]) {
       var reader = new FileReader();
   
       reader.onload = function (e) {
-        $('#costas').attr('src', e.target.result).width(500).height(550);
+         costas.setAttribute('src', e.target.result);
+         costas.style.width = '500px';
+         costas.style.height = '550px';
       };
   
       reader.readAsDataURL(input.files[0]);
