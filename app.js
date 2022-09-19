@@ -22,7 +22,9 @@ function readFront(input) {
     
       reader.onload = function (e) {
         //.attr('src', e.target.result).width(500).height(550);
-         frente.setAttribute('src', e.target.result).width(500).height(550)
+         frente.setAttribute('src', e.target.result);
+         frente.style.width = '500px';
+         frente.style.height = '550px';
       };
   
       reader.readAsDataURL(input.files[0]);
