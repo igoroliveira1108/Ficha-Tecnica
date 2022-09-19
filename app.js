@@ -11,6 +11,8 @@ let btnAddAviamento = document.querySelector('.addAviamento');
 let titleAv = document.querySelector('.titleAv');
 let titleTec = document.querySelector('.titleTec');
 let titleCor = document.querySelector('.titleCor');
+let frente = document.querySelector('#frente');
+let costas = document.querySelector('#costas');
 
 
 
@@ -34,7 +36,7 @@ function readFront(input) {
   }
 
   function readBack(input) {
-      let costas = document.querySelector('#costas');
+      
     if (input.files && input.files[0]) {
       var reader = new FileReader();
   
@@ -52,14 +54,19 @@ function readFront(input) {
   }
 
   buttonApagarFrente.addEventListener('click', () => {
-      $('#frente').attr('src', '').width(0).height(0);
+      
+      frente.setAttribute('src', '');
+      frente.width = '0px';
+      frente.height = '0px';
       document.querySelector('#frenteinput').style.display = 'block';
       document.querySelector('#frenteinput').value = '';
       buttonApagarFrente.style.display = 'none';
   });
 
   buttonApagarCostas.addEventListener('click', () => {
-    $('#costas').attr('src', '').width(0).height(0);
+    costas.setAttribute('src', '');
+    costas.width = '0px';
+    costas.height = '0px';
     document.querySelector('#costasinput').style.display = 'block';
     document.querySelector('#costasinput').value = '';
     buttonApagarCostas.style.display = 'none';
