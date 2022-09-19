@@ -20,7 +20,7 @@ function readFront(input) {
       var reader = new FileReader();
   
       reader.onload = function (e) {
-        $('#frente').attr('src', e.target.result).width(500).height(550);
+        document.querySelector('#frente').attr('src', e.target.result).width(500).height(550);
       };
   
       reader.readAsDataURL(input.files[0]);
