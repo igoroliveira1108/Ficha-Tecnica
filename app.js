@@ -134,9 +134,6 @@ btnAddCores.addEventListener('click', () => {
   ulCores.appendChild(liInputCores)
 
   btnRemove.addEventListener('click', () => {
-    while(liInputCores > 0){
-      titleCor.style.display = 'flex';
-    }
     liInputCores.remove();
   })
    
@@ -181,7 +178,6 @@ btnAddTecidos.addEventListener('click', () => {
    ulTecidos.appendChild(liInputTecidos)
 
   btnRemove.addEventListener('click', () => {
-    titleTec.style.display = 'none'
     liInputTecidos.remove();
   })
    
@@ -226,7 +222,6 @@ btnAddAviamento.addEventListener('click', () => {
    ulAviamento.appendChild(liInputAviamento)
 
   btnRemove.addEventListener('click', () => {
-    titleAv.style.display = 'none'
     liInputAviamento.remove();
   })
    
