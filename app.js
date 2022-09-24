@@ -1,5 +1,5 @@
 let buttonApagarFrente =  document.querySelector('#apagarImagemFrente');
-let buttonApagarCostas =  document.querySelector('#apagarImagemCostas');
+// let buttonApagarCostas =  document.querySelector('#apagarImagemCostas');
 let ulMedidas = document.querySelector('#inputMedidas');
 let ulCores = document.querySelector('#inputCores');
 let ulTecidos = document.querySelector('#inputTecido');
@@ -12,20 +12,16 @@ let titleAv = document.querySelector('.titleAv');
 let titleTec = document.querySelector('.titleTec');
 let titleCor = document.querySelector('.titleCor');
 let frente = document.querySelector('#frente');
-let costas = document.querySelector('#costas');
-
-
-
+// let costas = document.querySelector('#costas');
 
 function readFront(input) {
-    let frente = document.querySelector('#frente');
     if (input.files && input.files[0]) {
       var reader = new FileReader();
-    
+  
       reader.onload = function (e) {
-         frente.setAttribute('src', e.target.result);
-         frente.style.width = '500px';
-         frente.style.height = '550px';
+        frente.setAttribute('src', e.target.result);
+        frente.style.width = '500px';
+        frente.style.height = '550px';
       };
   
       reader.readAsDataURL(input.files[0]);
@@ -35,13 +31,23 @@ function readFront(input) {
     buttonApagarFrente.style.display = 'block';
   }
 
+  buttonApagarFrente.addEventListener('click', () => {
+    frente.setAttribute('src', '');
+    frente.width = '0px';
+    frente.height = '0px';
+    frente.style.display = 'none';
+    document.querySelector('#frenteinput').style.display = 'block';
+    document.querySelector('#frenteinput').value = '';
+    buttonApagarFrente.style.display = 'none';
+  });
+
+  /*
   function readBack(input) {
-      
     if (input.files && input.files[0]) {
       var reader = new FileReader();
   
       reader.onload = function (e) {
-         costas.setAttribute('src', e.target.result);
+        costas.setAttribute('src', e.target.result);
          costas.style.width = '500px';
          costas.style.height = '550px';
       };
@@ -53,16 +59,6 @@ function readFront(input) {
     buttonApagarCostas.style.display = 'block';
   }
 
-  buttonApagarFrente.addEventListener('click', () => {
-      
-      frente.setAttribute('src', '');
-      frente.width = '0px';
-      frente.height = '0px';
-      document.querySelector('#frenteinput').style.display = 'block';
-      document.querySelector('#frenteinput').value = '';
-      buttonApagarFrente.style.display = 'none';
-  });
-
   buttonApagarCostas.addEventListener('click', () => {
     costas.setAttribute('src', '');
     costas.width = '0px';
@@ -71,7 +67,7 @@ function readFront(input) {
     document.querySelector('#costasinput').value = '';
     buttonApagarCostas.style.display = 'none';
     
-});
+}); */
 
 btnAddMedidas.addEventListener('click', () => {
 
@@ -82,7 +78,8 @@ btnAddMedidas.addEventListener('click', () => {
 
       // Criar input
       let novoInput1 = document.createElement("input");
-      novoInput1.classList.add('inputText')
+      novoInput1.classList.add('inputText');
+      novoInput1.id = 'input1';
       novoInput1.type="text";
       liInput.appendChild(novoInput1);
 
@@ -128,16 +125,18 @@ btnAddCores.addEventListener('click', () => {
   novoInput3.type="text";
   liInputCores.appendChild(novoInput3); 
 
-   // Crete button remove
-   let btnRemove = document.createElement('i')
-   btnRemove.classList.add("removeCores");
-   btnRemove.innerHTML = '<i class="fa-solid fa-minus"></i>';
-   liInputCores.appendChild(btnRemove)
+  // Crete button remove
+  let btnRemove = document.createElement('i')
+  btnRemove.classList.add("removeCores");
+  btnRemove.innerHTML = '<i class="fa-solid fa-minus"></i>';
+  liInputCores.appendChild(btnRemove)
 
-   ulCores.appendChild(liInputCores)
+  ulCores.appendChild(liInputCores)
 
   btnRemove.addEventListener('click', () => {
-    titleCor.style.display = 'none'
+    while(liInputCores > 0){
+      titleCor.style.display = 'flex';
+    }
     liInputCores.remove();
   })
    
