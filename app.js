@@ -84,7 +84,8 @@ btnAddMedidas.addEventListener('click', () => {
       liInput.appendChild(novoInput1);
 
       let novoInput2 = document.createElement("input");
-      novoInput2.classList.add('inputText')
+      novoInput2.classList.add('inputText');
+      novoInput2.id = 'input2';
       novoInput2.type="text";
       liInput.appendChild(novoInput2); 
 
