@@ -35,7 +35,6 @@ function readFront(input) {
     frente.setAttribute('src', '');
     frente.width = '0px';
     frente.height = '0px';
-    frente.style.display = 'none';
     document.querySelector('#frenteinput').style.display = 'block';
     document.querySelector('#frenteinput').value = '';
     buttonApagarFrente.style.display = 'none';
