@@ -19,47 +19,48 @@
             <div class="inputroupas">
                 <div class="inputs">
                     <label for="empresa">Empresa:</label>
-                    <input type="text" id="empresa" >
+                    <input type="text" class="input" id="empresa" >
                 </div>
                 <div class="inputs">
                     <label for="peca">Peça:</label>
-                    <input type="text" id="peca" >
+                    <input type="text" class="input" id="peca" >
                 </div>
                 <div class="inputs">
                     <label for="referencia">Referência:</label>
-                    <input type="text" id="referencia" >
+                    <input type="text" class="input" id="referencia" >
                 </div>
                 <div class="inputs">
                     <label for="data">Data:</label>
-                    <input type="text" id="data" >
+                    <input type="text" class="input" id="data" >
                 </div>
                 <div class="inputs">
                     <label for="modelista">Modelista:</label>
-                    <input type="text" id="modelista" >
+                    <input type="text" class="input" id="modelista" >
                 </div>
                 <div class="inputs">
                     <label for="gradacao">Gradação:</label>
-                    <input type="text" id="gradacao" >
+                    <input type="text" class="input" id="gradacao" >
                 </div>
             </div>
             <br>
             <div class="imagens">
                 <div class="frente">
                     <br>
-                    <h3 class="center">Frente</h3>
+                    <h3 class="center">Costa / Frente</h3>
                     <input type="file" id="frenteinput" onchange="readFront(this);" accept="image/png, image/jpeg">
                     <br>
                     <img id="frente" src="#" />
                     <i id="apagarImagemFrente" style="display: none;" class="fa-solid fa-trash center"></i>
-                </div>    
-                <div class="costas">
+                </div>  
+                
+                <!-- <div class="costas">
                     <br>
                     <h3 class="center">Costas</h3>
                     <input type="file" id="costasinput" onchange="readBack(this);" accept="image/png, image/jpeg">
                     <br>
                     <img id="costas" src="#" />
-                    <i id="apagarImagemCostas" style="display: none;" class="fa-solid fa-trash center"></i>
-                </div>
+                    <i id="apagarImagemCostas" style="display: none;" class="fa-solid fa-trash center"></i> 
+                </div> -->
             </div>
             <br>
             <br>
@@ -86,7 +87,7 @@
                             </div>
                             <div class="aviamentos">
                                 <div class="titleAv">
-                                    <h3 class="titleInput">Fornecedor</h3>
+                                    <h3 class="titleInput">Posição</h3>
                                     <h3 class="titleInput">Nome</h3>
                                     <h3 class="titleInput">Tamanho</h3>
                                     <h3 id="qtd" class="titleInput">Qtd</h3>
@@ -121,7 +122,7 @@
                             <div class="cores">
                                 <div class="titleCor" >
                                     <h3 class="titleInput">Cor</h3>
-                                    <h3 class="titleInput">Local</h3>
+                                    <h3 class="titleInput">Posição</h3>
                                     <h3 class="titleInput">Qtd Peça</h3>
                                 </div>
                                 <ul id="inputCores">
