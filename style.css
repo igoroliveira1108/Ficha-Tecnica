@@ -30,7 +30,7 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
-#input1{
+#input1, #input2{
     width: 12rem;
 }
 
