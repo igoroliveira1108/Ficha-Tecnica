@@ -41,6 +41,7 @@ body {
 .inputs {
     padding: 5px;
     border: 1px solid black;
+    display: flex;
 }
 
 .inputs input {
