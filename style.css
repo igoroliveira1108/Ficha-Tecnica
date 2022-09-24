@@ -22,12 +22,20 @@
 }
 
 body {
-    padding: 4rem;
+    padding: 1rem;
 }
 
 .inputroupas{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+#input1{
+    width: 12rem;
+}
+
+.input {
+    width: 45rem;
 }
 
 .inputs {
