@@ -15,7 +15,21 @@ let frente = document.querySelector('#frente');
 let btnAv = document.querySelector('.btnAv');
 let btnCor = document.querySelector('.btnCor');
 let btnTec = document.querySelector('.btnTec');
+let download = document.querySelector('.download');
 // let costas = document.querySelector('#costas');
+
+window.onload = function() {
+  download.addEventListener('click', ()=> {
+      let invoice = document.querySelector('.invoice');
+      var opt = {
+        margin: [1, 0, 1, 0],
+        filename: document.querySelector('#peca').value,
+        image: { type: 'jpeg', quality: 0.95},
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+      html2pdf().from(invoice).set(opt).save();
+  });
+};
 
 function readFront(input) {
     if (input.files && input.files[0]) {
