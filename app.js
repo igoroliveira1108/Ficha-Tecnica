@@ -12,6 +12,9 @@ let titleAv = document.querySelector('.titleAv');
 let titleTec = document.querySelector('.titleTec');
 let titleCor = document.querySelector('.titleCor');
 let frente = document.querySelector('#frente');
+let btnAv = document.querySelector('.btnAv');
+let btnCor = document.querySelector('.btnCor');
+let btnTec = document.querySelector('.btnTec');
 // let costas = document.querySelector('#costas');
 
 function readFront(input) {
@@ -133,6 +136,10 @@ btnAddCores.addEventListener('click', () => {
 
   ulCores.appendChild(liInputCores)
 
+  btnCor.addEventListener('click', () => {
+    titleCor.style.display = 'none';
+  })
+
   btnRemove.addEventListener('click', () => {
     liInputCores.remove();
   })
@@ -177,6 +184,10 @@ btnAddTecidos.addEventListener('click', () => {
 
    ulTecidos.appendChild(liInputTecidos)
 
+   btnTec.addEventListener('click', () => {
+    titleTec.style.display = 'none';
+  })
+
   btnRemove.addEventListener('click', () => {
     liInputTecidos.remove();
   })
@@ -185,7 +196,7 @@ btnAddTecidos.addEventListener('click', () => {
 
 btnAddAviamento.addEventListener('click', () => {
 
-  titleAv.style.display = 'flex'
+  titleAv.style.display = 'flex';
     
   // Criar li 1
   let liInputAviamento = document.createElement("li");
@@ -221,10 +232,14 @@ btnAddAviamento.addEventListener('click', () => {
 
    ulAviamento.appendChild(liInputAviamento)
 
-  btnRemove.addEventListener('click', () => {
-    liInputAviamento.remove();
+  btnAv.addEventListener('click', () => {
+    titleAv.style.display = 'none';
   })
-   
+
+  btnRemove.addEventListener('click', () => {
+        liInputAviamento.remove();
+  })
+  
 });
 
 
