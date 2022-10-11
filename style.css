@@ -14,11 +14,16 @@
 .title {
     padding: 5px;
     border: 1px solid black;
+    border-radius: 3px;
 }
 
 .titleImage {
     display: flex;
     justify-content: center;
+}
+
+.download {
+    margin-left: 10px;
 }
 
 body {
@@ -30,18 +35,29 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: rgb(252, 252, 252);
+    border-radius: 3px;
+    padding: 5px;
+}
+
 #input1, #input2{
     width: 12rem;
 }
 
 .input {
     width: 25rem;
+    font-size: 12px;
+    margin-top: 3px;
 }
 
 .inputs {
-    padding: 5px;
+    border-radius: 3px;
     border: 1px solid black;
     display: flex;
+    margin: 3px;
 }
 
 .inputs input {
@@ -104,6 +120,7 @@ body {
 
 
 .inputText, .inputTextCores, .inputTextTecidos, .inputTextAviamento, .titleInput{
+    border-radius: 3px;
     padding: 5px;
     width: 9rem;
     page-break-inside: avoid;
@@ -117,6 +134,10 @@ body {
 
 .titleAv, .titleTec, .titleCor {
     display: none;
+}
+
+.donwloadPDF {
+    font-size: 1.5rem;
 }
 
 
